@@ -10,4 +10,8 @@ spec:
     protocol: TCP
   selector:
     app: docker-nodejs-demo
-  type: NodePort
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
